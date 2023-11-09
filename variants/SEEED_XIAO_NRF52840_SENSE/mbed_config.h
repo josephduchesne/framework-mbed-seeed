@@ -78,7 +78,7 @@
 #define MBED_CONF_CELLULAR_RANDOM_MAX_START_DELAY                               0                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_USE_APN_LOOKUP                                       0                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_USE_SMS                                              0                                                                                                // set by library:cellular
-#define MBED_CONF_CORDIO_DESIRED_ATT_MTU                                        23                                                                                               // set by library:cordio
+#define MBED_CONF_CORDIO_DESIRED_ATT_MTU                                        247                                                                                              // set by library:cordio
 #define MBED_CONF_CORDIO_LL_DEFAULT_EXTENDED_ADVERTISING_FRAGMENTATION_SIZE     64                                                                                               // set by library:cordio-ll
 #define MBED_CONF_CORDIO_LL_EXTENDED_ADVERTISING_SIZE                           512                                                                                              // set by library:cordio-ll[MCU_NRF52840]
 #define MBED_CONF_CORDIO_LL_MAX_ACL_SIZE                                        256                                                                                              // set by library:cordio-ll
@@ -95,7 +95,7 @@
 #define MBED_CONF_CORDIO_NORDIC_LL_WSF_POOL_BUFFER_SIZE                         4900                                                                                             // set by library:cordio-nordic-ll
 #define MBED_CONF_CORDIO_PREFERRED_TX_POWER                                     0                                                                                                // set by library:cordio
 #define MBED_CONF_CORDIO_ROUTE_UNHANDLED_COMMAND_COMPLETE_EVENTS                1                                                                                                // set by library:cordio
-#define MBED_CONF_CORDIO_RX_ACL_BUFFER_SIZE                                     70                                                                                               // set by library:cordio
+#define MBED_CONF_CORDIO_RX_ACL_BUFFER_SIZE                                     247                                                                                              // set by library:cordio
 #define MBED_CONF_CORDIO_TRACE_HCI_PACKETS                                      0                                                                                                // set by library:cordio
 #define MBED_CONF_CORDIO_TRACE_PAL_ECHOES                                       0                                                                                                // set by library:cordio
 #define MBED_CONF_CRYPTOCELL310_PRESENT                                         1                                                                                                // set by library:cryptocell310
@@ -202,6 +202,7 @@
 #define MBED_CONF_LORA_NWKSKEY                                                  {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00} // set by library:lora
 #define MBED_CONF_LORA_OVER_THE_AIR_ACTIVATION                                  1                                                                                                // set by library:lora
 #define MBED_CONF_LORA_PHY                                                      EU868                                                                                            // set by library:lora
+#define MBED_CONF_LORA_PHY_AS923_SUB_REGION                                     AS1                                                                                              // set by library:lora
 #define MBED_CONF_LORA_PUBLIC_NETWORK                                           1                                                                                                // set by library:lora
 #define MBED_CONF_LORA_TX_MAX_SIZE                                              64                                                                                               // set by library:lora
 #define MBED_CONF_LORA_UPLINK_PREAMBLE_LENGTH                                   8                                                                                                // set by library:lora
@@ -223,6 +224,7 @@
 #define MBED_CONF_LWIP_MEM_SIZE                                                 1600                                                                                             // set by library:lwip
 #define MBED_CONF_LWIP_ND6_QUEUEING                                             0                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_ND6_RDNSS_MAX_DNS_SERVERS                                0                                                                                                // set by library:lwip
+#define MBED_CONF_LWIP_NETBUF_RECVINFO_ENABLED                                  0                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_NUM_NETBUF                                               8                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_NUM_PBUF                                                 8                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_PBUF_POOL_SIZE                                           5                                                                                                // set by library:lwip
@@ -268,6 +270,7 @@
 #define MBED_CONF_PLATFORM_CALLBACK_NONTRIVIAL                                  1                                                                                                // set by application[*]
 #define MBED_CONF_PLATFORM_CRASH_CAPTURE_ENABLED                                0                                                                                                // set by library:platform
 #define MBED_CONF_PLATFORM_CTHUNK_COUNT_MAX                                     8                                                                                                // set by library:platform
+#define MBED_CONF_PLATFORM_DEEPSLEEP_STATS_VERBOSE                              1                                                                                                // set by library:platform
 #define MBED_CONF_PLATFORM_DEFAULT_SERIAL_BAUD_RATE                             115200                                                                                           // set by application[*]
 #define MBED_CONF_PLATFORM_ERROR_ALL_THREADS_INFO                               0                                                                                                // set by library:platform
 #define MBED_CONF_PLATFORM_ERROR_FILENAME_CAPTURE_ENABLED                       0                                                                                                // set by library:platform
@@ -293,6 +296,18 @@
 #define MBED_CONF_PPP_IPV6_ENABLED                                              0                                                                                                // set by library:ppp
 #define MBED_CONF_PPP_MBED_EVENT_QUEUE                                          0                                                                                                // set by library:ppp
 #define MBED_CONF_PPP_THREAD_STACKSIZE                                          816                                                                                              // set by library:ppp
+#define MBED_CONF_QSPIF_DIRECT_RESET                                            1                                                                                                // set by library:qspif[MCU_NRF52840]
+#define MBED_CONF_QSPIF_ENABLE_AND_RESET                                        0                                                                                                // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_CSN                                                MBED_CONF_DRIVERS_QSPI_CSN                                                                       // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_FREQ                                               32000000                                                                                         // set by library:qspif[MCU_NRF52840]
+#define MBED_CONF_QSPIF_QSPI_IO0                                                MBED_CONF_DRIVERS_QSPI_IO0                                                                       // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_IO1                                                MBED_CONF_DRIVERS_QSPI_IO1                                                                       // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_IO2                                                MBED_CONF_DRIVERS_QSPI_IO2                                                                       // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_IO3                                                MBED_CONF_DRIVERS_QSPI_IO3                                                                       // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_MIN_PROG_SIZE                                      4                                                                                                // set by library:qspif[MCU_NRF52840]
+#define MBED_CONF_QSPIF_QSPI_MIN_READ_SIZE                                      4                                                                                                // set by library:qspif[MCU_NRF52840]
+#define MBED_CONF_QSPIF_QSPI_POLARITY_MODE                                      0                                                                                                // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_SCK                                                MBED_CONF_DRIVERS_QSPI_SCK                                                                       // set by library:qspif
 #define MBED_CONF_RTOS_API_PRESENT                                              1                                                                                                // set by library:rtos-api
 #define MBED_CONF_RTOS_ENABLE_ALL_RTX_EVENTS                                    0                                                                                                // set by library:rtos
 #define MBED_CONF_RTOS_EVFLAGS_NUM                                              0                                                                                                // set by library:rtos
